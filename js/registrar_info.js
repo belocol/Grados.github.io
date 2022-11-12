@@ -1,7 +1,5 @@
-//import { registerUser } from "./firebase.js";//crear usuario
 import { registerSetDoc } from "./firebase.js";//enviar los datos del usuario a la base de datos
-import { db } from "./firebase.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
+
 
 
 
@@ -52,7 +50,8 @@ form.addEventListener('submit',(evento)=>{
             pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
             fecha_salida,periodo_salida)
         
-        alert("Su solicitud será procesada")
+            window.location.href="procesar_solicitud.html"
+           
         
         
     }
@@ -60,4 +59,3 @@ form.addEventListener('submit',(evento)=>{
         console.log("el error es  :"+error.code)
     }
 } 
-

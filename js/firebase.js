@@ -30,15 +30,16 @@ export const registerUser = (email,password) => createUserWithEmailAndPassword(a
 
 
 export const registerSetUsuario = (nombre,apellido,email,password) => {
-
+ 
   setDoc(doc(db,"Estudiantes_registrados",email),{
 
+    
     nombre,
     apellido,
     email,
     password
   })
-
+  //console.log(registerSetUsuario).value
 }
 
 export const registerSetDoc = (nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,

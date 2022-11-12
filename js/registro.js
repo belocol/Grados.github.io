@@ -7,7 +7,6 @@ const form = document.getElementById("f1");
 form.addEventListener('submit',(evento)=>{
     evento.preventDefault();
 
-
     const nombre = document.getElementById("nombre");
     const apellido = document.getElementById("apellido");
     const email = document.getElementById("email");
@@ -16,7 +15,7 @@ form.addEventListener('submit',(evento)=>{
     const email2 = document.getElementById("email2");
     const password2 = document.getElementById("password2");
     
-    //console.log(nombre.value,apellido.value,email.value,password.value)
+    console.log(nombre.value,apellido.value,email.value,password.value)
 
     const validar= validacion(nombre.value,apellido.value,email.value,password.value,email2.value,password2.value)
         if(validar==="OK"){
@@ -26,9 +25,7 @@ form.addEventListener('submit',(evento)=>{
             alert(validar)
         }
      
-
 });
-
 
  async function registroAuth(nombre,apellido,email,password){
     try{
@@ -36,9 +33,7 @@ form.addEventListener('submit',(evento)=>{
         const registro = await registerUser(email,password)
         console.log(registro)
         registerSetUsuario(nombre,apellido,email,password)
-
-        console.log(registerSetUsuario);
-        
+    
         alert("Usuario creado exisotamente")
         window.location.href="login.html";
         form.reset();
