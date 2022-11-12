@@ -1,0 +1,517 @@
+
+<!doctype html>
+<html lang="en">
+<!-- PARTE DEL HEAD DONDE VA LA INFORMACION DE LOS METADATOS -->
+  <head>
+    <title>PLANEACION DE GRADOS</title>
+    
+    <meta charset="utf-8">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/cargarmunicipios.js"></script>
+    
+   
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+    
+
+  </head>
+<!-- PARTE DEL HEAD DONDE VA LA INFORMACION DE LOS METADATOS -->
+  <body class="body"> 
+    
+
+      <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" 
+              aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-home"></i>
+                Inicio
+                <span class="sr-only">(current)</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              
+                  <div class="dropdown-divider"></div>
+                  <button > <a class="dropdown-item" href="" id="cerrarSesion">Cerrar Sesión</a></button>
+                </div>
+            </li>
+           
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Ingresa tu busqueda" aria-label="Buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+
+          
+        </div>
+      </nav>
+    
+    
+<!--CREACION DEL DIV PRINCIPAL  QUE CONTIENE EL TITULO Y EL LOGO DE LA UNIVERSIDAD-->
+    <div class="banner">
+       
+        <div class="imangenInicio" >
+            <img  class="imagenInicio__1" src="../imagenes/icono.png" width="240px" height="120">
+        </div>
+        <div class="titulo"> PLANEACIÓN DE GRADOS UNITRÓPICO </div>
+    </div>
+    <br>
+    <div class="introduccion">
+        
+        <h4>Sección Oficial de Unitrópico donde el estudiante podrá subir los datos e información necesaria para su proceso de graduación,
+             es importante que <b>ingrese</b> información precisa para que su solicitud sea procesada correctamente.</h4>
+    </div>
+<!--CREACION DEL DIV PRINCIPAL  QUE CONTIENE EL TITULO Y EL LOGO DE LA UNIVERSIDAD-->
+<div>
+  
+</div>
+<!--FORMULARIO PRINCIPAL-->
+
+<form id="f1" name="f1" > 
+
+<div class="contenedorForm"> <!--contiene toda la estructura del formulario de informacion personal-->
+
+  <div id="solid"> 
+    <div id="contenedorInfo">
+      <h5>Información Personal</h5>
+  </div>
+<!---------------------------------------------------------------------------------------------------------------------->
+    <div class="modal-body"> 
+    <div class="row">
+
+<!--NOMBRES-->  
+    <div class="col-lg-4">
+    <div class="form-floating mt-3">
+      <input type="text" class="form-control" name="nombres" id="nombres"  >
+      <label for="floatingInput">Nombres</label>
+      
+    </div>
+    </div>
+
+<!--APELLIDOS-->
+    <div class="col-lg-4">
+    <div class="form-floating mt-3">
+      <input type ="text" for="text" class="form-control" name="apellidos" id="apellidos"  >
+      <label for="floatingInput">Apellidos</label>
+    </div>
+    </div>
+
+<!--TIPO DE IDENTIFICACION-->
+    <div class="col-lg-4">
+      <div class="form-group">
+        <div class="form-floating mt-3">
+          <select class="form-select" name="tipoIdentificacion" id="tipoIdentificacion" aria-label="Floating label select example"  >
+          <option selected></option>
+          <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+          <option value="Cedula de ciudadania">Cédula de ciudadanía</option>
+          <option value="Cedula de extranjeria">Cédula de extranjería</option> 
+          <option value="Otro">Otro</option>  
+        </select>
+        <label for="floatingSelect">Tipo de identificación</label>
+      </div>
+      </div>
+      </div>
+  
+      </div>
+
+<div class="row">
+<!--Numero de identificacion-->
+
+<div class="col-lg-4">
+  <div class="form-floating mt-2">
+    <input type ="text" for="text" class="form-control" name="numIdentificacion"  id="numIdentificacion" >
+    <label for="floatingInput">Número de identificación</label>
+  </div>
+  </div>
+
+<!--Pais de expedicion-->
+
+<div class="col-lg-4">
+  <div class="form-group">
+    <div class="form-floating mt-2">
+      <select class="form-select" name="PaisNacimiento"  id="PaisNacimiento"  aria-label="Floating label select example" >
+      <option selected></option>
+      <option value="Yopal">Colombia</option>
+    
+    
+    </select>
+    <label for="floatingSelect">País de nacimiento</label>
+  </div>
+  </div>
+  </div>
+
+  <!--Departamento de expedicion-->
+
+<div class="col-lg-4">
+  <div class="form-group">
+    <div class="form-floating mt-2">
+      <select name="   " id="departamentos" onchange="cambia_departamento()" class="form-select">
+       
+        <option value=""></option>
+      <option value="AMAZONAS">AMAZONAS</option>
+      <option value="ANTIOQUIA">ANTIOQUIA</option>
+      <option value="ARAUCA">ARAUCA</option>
+      <option value="ATLÁNTICO">ATLÁNTICO</option>
+      <option value="BOLÍVAR">BOLÍVAR</option>
+      <option value="BOYACÁ">BOYACÁ</option>
+      <option value="CALDAS">CALDAS</option>
+      <option value="CAQUETÁ">CAQUETÁ</option>
+      <option value="CASANARE">CASANARE</option>
+      <option value="CAUCA">CAUCA</option>
+      <option value="CESAR">CESAR</option>
+      <option value="CHOCÓ">CHOCÓ</option>
+      <option value="CÓRDOBA">CÓRDOBA</option>
+      <option value="CUNDINAMARCA">CUNDINAMARCA</option>
+      <option value="DISTRITO CAPITAL">DISTRITO CAPITAL</option>
+      <option value="GUAINÍA">GUAINÍA</option>
+      <option value="GUAVIARE">GUAVIARE</option>
+      <option value="HUILA">HUILA</option>
+      <option value="LA GUAJIRA">LA GUAJIRA</option>
+      <option value="MAGDALENA">MAGDALENA</option>
+      <option value="META">META</option>
+      <option value="NARIÑO">NARIÑO</option>
+      <option value="NORTE DE SANTANDER">NORTE DE SANTANDER</option>
+      <option value="PUTUMAYO">PUTUMAYO</option>
+      <option value="QUINDÍO">QUINDÍO</option>
+      <option value="RISARALDA">RISARALDA</option>
+      <option value="SAN ANDRÉS Y PROVIDENCIA">SAN ANDRÉS Y PROVIDENCIA</option>
+      <option value="SANTANDER">SANTANDER</option>
+      <option value="SUCRE">SUCRE</option>
+      <option value="TOLIMA">TOLIMA</option>
+      <option value="VALLE DEL CAUCA">VALLE DEL CAUCA</option>
+      <option value="VAUPÉS">VAUPÉS</option>
+      <option value="VICHADA">VICHADA</option>
+      </select>
+    <label for="floatingSelect">Departamento de expedición</label>
+  </div>
+  </div>
+  </div>
+
+
+</div>  
+ 
+ <div class="row">
+
+ <!--Municipio de expedicion-->
+
+ <div class="col-lg-4">
+  <div class="form-group">
+    <div class="form-floating mt-2">
+      <select name=" " id="minucipios" class="form-select">
+
+        <option value="">   </option>
+
+    </select>
+    <label for="floatingSelect">Municipio de expedición</label>
+  </div>
+  </div>
+  </div>
+<!--MUNICIPIO DE RESIDENCIA -->
+
+  <div class="col-lg-4">
+    <div class="form-group">
+    <div class="form-floating mt-2">
+      <select class="form-select" name="Residencia"  id="Residencia" aria-label="Floating label select example">
+        <option selected></option>
+        <option value="Yopal">Yopal</option>
+        <option value="Aguazul">Aguazul</option>
+        <option value="Chameza">Chámeza</option>
+        <option value="HatoCorozal">Hato Corozal</option>
+        <option value="LaSalina">La Salina</option>
+        <option value="Mani">Maní</option>
+        <option value="Monterrey">Monterrey</option>
+        <option value="Nunchia">Nunchía</option>
+        <option value="Orocue">Orocué</option>
+        <option value="PazdeAriporo">Paz de Ariporo</option>
+        <option value="Pore">Pore</option>
+        <option value="Recetor">Recetor</option>
+        <option value="Sabanalarga">Sabanalarga</option>
+        <option value="Sacama">Sácama</option>
+        <option value="SanLuisdePalenque">San Luis de Palenque</option>
+        <option value="Tamara">Támara</option>
+        <option value="Tauramena">Tauramena</option>
+        <option value="Trinidad">Trinidad</option>
+        <option value="Villanueva">Villanueva</option>
+        <option value="Otro">Otro</option>    
+      </select>
+      <label for="floatingSelect">Municipio de residencia</label>
+    </div>
+    </div>
+    </div>
+
+    <!--Direccion-->
+
+    <div class="col-lg-4">
+      <div class="form-floating mt-2">
+        <input type="text" class="form-control" name="Barrio"  id="Direccion"  >
+        <label for="floatingInput">Direccion</label>
+      </div>
+      </div>
+    
+</div> 
+ <!--Barrio-->
+<div class="row">
+
+  <div class="col-lg-4">
+    <div class="form-floating mt-2">
+      <input type="text" class="form-control" name="Barrio"  id="Barrio"  >
+      <label for="floatingInput">Barrio</label>
+    </div>
+    </div>
+
+  
+  <!--Correo institucional-->
+
+  <div class="col-lg-8">
+    <div class="form-floating mt-3">
+      <div class="input-group mb-3" >
+      <span class="input-group-text">Correo institucional</span>
+       <input type="text" class="form-control" placeholder="@unitropico.edu.co" name="correoInstitucional"  id="correoInstitucional"  >
+       <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Correo institucional" id="btnEjemploCorreo"
+       data-bs-content="mariacuellar.es@unitropico.edu.co ">Ejemplo</button>
+      </div>
+     </div>  
+  </div>
+
+
+
+<!--AQUI VA EL FORM HACIA ARRIBA-->
+
+</div>
+</div>
+</div>
+</div>
+
+<!--INICIO FORMULARIO INFORMACION ACADEMICA DEL ESTUDIANTE-->
+
+<div class="contenedorFormularioAcademico" > <!--contiene toda la estructura del formulario de informacion personal-->
+
+  <div id="solid"> 
+    <div id="contenedorInfoAcademico">
+      <h5>Información Académica</h5>
+   </div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+ <!--creacion del formulario informacion academica-->
+  <div class="modal-body"> 
+
+    <div class="row">
+
+ <!--Programa academico-->
+
+<div class="col-lg-4">
+  <div class="form-group">
+  <div class="form-floating mt-3">
+        <select class="form-select" name="ProgramaAcademico"  id="ProgramaAcademico" aria-label="Floating label select example"  >
+          <option selected></option>
+          <option value="Medicina Veterinaria y Zootecnia">Medicina Veterinaria y Zootecnia</option>
+          <option value="Derecho">Derecho </option>
+          <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
+          <option value="Ingeniería Agroforestal">Ingeniería Agroforestal</option>
+          <option value="Ingeniería  de Sistemas">Ingeniería  de Sistemas</option>
+          <option value="Ingeniería de alimentos">Ingeniería de alimentos</option>
+          <option value="Contaduría Pública">Contaduría Pública</option>
+          <option value="Ingeniería Civil">Ingeniería Civil</option>
+          <option value="Arquitectura">Arquitectura </option>
+          <option value="Administración de Empresas">Administración de Empresas</option>
+          <option value="Administración y Negocios Internacionales">Administración y Negocios Internacionales</option>
+          <option value="Biología Ambiental">Biología Ambiental</option>
+          <option value="Ingeniería de Petróleos">Ingeniería de Petróleos</option>
+          <option value="Especialización en Evaluación y Gestión Ambiental">Especialización en Evaluación y Gestión Ambiental</option>
+  </select>
+  <label for="floatingSelect">Programa académico</label>
+</div>
+</div>
+</div>
+<!--Titulo a optar-->
+ <div class="col-lg-6">
+    <div class="form-group">
+    <div class="form-floating mt-3">
+    <select class="form-select" name="TituloOptar"  id="TituloOptar"aria-label="Floating label select example" >
+       <option selected></option>
+       <option value="Técnico profesional en desarrollo para dispositivos móviles">Técnico profesional en desarrollo para dispositivos móviles</option>
+       <option value="Técnico profesional en operación de servicios turísticos">Técnico profesional en operación de servicios turísticos</option>
+       <option value="Técnico profesional en comercio internacional">Técnico profesional en comercio internacional</option>
+       <option value="Técnico profesional en muestreo y monitoreo ambiental">Técnico profesional en muestreo y monitoreo ambiental</option>
+       <option value="Técnico profesional en manejo ecológico de plagas">Técnico profesional en manejo ecológico de plagas</option>
+       <option value="Técnico profesional en perforación de pozos petróliferos">Técnico profesional en perforación de pozos petróliferos</option>
+       <option value="Tecnología en investigación judicial">Tecnología en investigación judicial</option>
+       <option value="Tecnología en diseño y desarrollo de software">Tecnología en diseño y desarrollo de software</option>
+       <option value="Tecnología en gestión logistica">Tecnología en gestión logistica</option>
+       <option value="Tecnología en gestión ambiental">Tecnología en gestión ambiental</option>
+       <option value="Tecnología en producción de petróleo">Tecnología en producción de petróleo</option>
+       <option value="Tecnología en gestión turística">Tecnología en gestión turística</option>
+       <option value="Ingeniería civil">Ingeniería civil</option>
+       <option value="Ingeniería agroforestal">Ingeniería agroforestal</option>
+       <option value="Ingeniería agroindustrial">Ingeniería agroindustrial</option>
+       <option value="Ingeniería de alimentos">Ingeniería de alimentos</option>
+       <option value="Ingeniería de sistemas">Ingeniería de sistemas</option>
+       <option value="Derecho">Derecho</option>
+       <option value="Biología">Biología</option>
+       <option value="Economía">Economía</option>
+       <option value="Contaduría pública">Contaduría pública</option>
+       <option value="Arquitectura">Arquitectura</option>
+       <option value="Comercio internacional">Comercio internacional</option>
+       <option value="Medicina veterinaria y zootecnia">Medicina veterinaria y zootecnia</option>
+       <option value="Medicina veterinaria ">Medicina veterinaria </option>
+       <option value="Administración de empresas turísticas">Administración de empresas turísticas</option>
+       <option value="Administración de empresas por ciclos propedéuticos"> Administración de empresas por ciclos propedéuticos</option>
+       <option value="Administración y negocios internacionales por ciclos propedéuticos">Administración y negocios internacionales por ciclos propedéuticos</option>
+       <option value="Biología Ambiental por ciclos propedéuticos">Biología ambiental por ciclos propedéuticos</option>
+       <option value="Ingeniero de Petróleos">Ingeniería de petróleos  por ciclos propedéuticos </option>
+       <option value="Ingeniería de sistemas  por ciclos propedéuticos ">Ingeniería de sistemas  por ciclos propedéuticos </option>
+        <option value="Especialización en evaluación y gestión Ambiental">Especialización en evaluación y gestión Ambiental</option>
+        <option value="Especialización en genética">Especialización en genética</option>
+                 
+          </select>
+          <label for="floatingSelect">Titulo a optar</label>
+        </div>
+        </div>
+        </div>
+<!--Nivel Academico-->
+<div class="col-lg-2">
+  <div class="form-group">
+    <div class="form-floating mt-3">
+      <select class="form-select" name="NivelAcademico" id="NivelAcademico" aria-label="Floating label select example">
+         <option selected></option>
+         <option value="Tecnico">Técnico</option>
+         <option value="Tecnologo">Técnologo</option>
+         <option value="Profesional">Profesional</option>
+         <option value="Especialista">Especialista</option>
+         </select>
+         <label for="floatingSelect">Nivel</label>
+</div>
+</div>
+</div>
+<div>
+    
+  <div class="row">
+
+<!--Año ingreso-->
+
+
+<div class="col-lg-3">
+  <div class="form-floating mt-3">
+    <input type="text" class="form-control" name="Fechaingreso" id="Fechaingreso" >
+    <label for="floatingInput">Año de ingreso</label>
+</div>
+</div>
+
+    <!--PERIODO INGRESO-->
+    <div class="col-lg-3">
+      <div class="form-group">
+        <div class="form-floating mt-3">
+          <select class="form-select" name="Periodoingreso"  id="Periodoingreso"aria-label="Floating label select example" >
+          <option selected></option>
+          <option value="A">1</option>
+          <option value="B">2</option>
+    
+        </select>
+        <label for="floatingSelect">Periodo ingreso</label>
+      </div>
+      </div>
+      </div>
+
+<!--Año Salida-->
+
+<div class="col-lg-3">
+  <div class="form-floating mt-3">
+    <input type="text" class="form-control" name="Fechasalida"  id="Fechasalida">
+    <label for="floatingInput">Año salida</label>
+  </div>
+  </div>
+
+<!--Periodo salida-->
+  <div class="col-lg-3">
+    <div class="form-group">
+      <div class="form-floating mt-3">
+        <select class="form-select" name="PeriodoSalida" id="PeriodoSalida" aria-label="Floating label select example" >
+        <option selected></option>
+        <option value="A">1</option>
+        <option value="B">2</option>
+  
+      </select>
+      <label for="floatingSelect">Periodo Salida</label>
+    </div>
+    </div>
+    </div>
+
+      </div>
+      <div class="row">
+      <!--Codigo examen saber pro y tyt-->          
+  
+  
+  </div>
+</div>
+</div>
+</div>
+<!--AQUI VA EL OTRO FROM HACIA ARRIBA-->
+</div>
+</div>
+
+<!-- INICIO FORMULARIO INFORMACION DE GRADUACION DEL ESTUDIANTE-->
+
+
+
+  <!--BOTON ENVIAR Y ACEPTACION DE INFORMACION-->
+
+  <div class="ContenedorInformacionAceptar">
+    <div class="form-check form-switch">
+      
+      <button type="submit" class="btn btn-primary" id="btnenviar" name="btnenviar" >ENVIAR</button>
+    </div>
+  
+  </div>
+
+
+
+
+</form>
+</body>
+<script type="module" src="../js/registrar_info.js"></script>
+<script type="module" src="../js/cerrar_sesion.js"></script>
+</html>
+
+
+    
+    <!-- <script src="conexionJs.js"></script>
+    <script src="validacion.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+      </script> -->
+  
+</script>
+</body>
+</html>
