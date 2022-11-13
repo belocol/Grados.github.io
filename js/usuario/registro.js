@@ -1,6 +1,6 @@
-import { registerUser } from "./firebase.js";//crear usuario
-import { registerSetUsuario } from "./firebase.js";//enviar los datos del usuario a la base de datos
-import { validacion} from "./validar_registro.js";
+import { registerUser } from "../firebase.js";//crear usuario
+
+import { validacion} from "../validaciones/validar_registro.js";
 
 const form = document.getElementById("f1");
 
@@ -19,20 +19,22 @@ form.addEventListener('submit',(evento)=>{
 
     const validar= validacion(nombre.value,apellido.value,email.value,password.value,email2.value,password2.value)
         if(validar==="OK"){
-            registroAuth(nombre.value,apellido.value,email.value,password.value);
-        
+           
+            registroAuth(email.value,password.value)
         }else{
             alert(validar)
         }
+
      
 });
 
- async function registroAuth(nombre,apellido,email,password){
+
+async function registroAuth(email,password){
     try{
         
         const registro = await registerUser(email,password)
         console.log(registro)
-        registerSetUsuario(nombre,apellido,email,password)
+        
     
         alert("Usuario creado exisotamente")
         window.location.href="login.html";
@@ -40,5 +42,6 @@ form.addEventListener('submit',(evento)=>{
     }
     catch (error){
         console.log("el error es  :"+error.code)
+        
     }
 } 

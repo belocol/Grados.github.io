@@ -1,11 +1,8 @@
-import { registerSetDoc } from "./firebase.js";//enviar los datos del usuario a la base de datos
+import { registerSetDoc } from "../firebase.js";//enviar los datos del usuario a la base de datos
 
+const formu = document.getElementById("f1");
 
-
-
-const form = document.getElementById("f1");
-
-form.addEventListener('submit',(evento)=>{
+formu.addEventListener('submit',(evento)=>{
     evento.preventDefault();
 
 
@@ -39,19 +36,24 @@ form.addEventListener('submit',(evento)=>{
         
 });
 
-
-
- async function registroAuth(nombre,apellido,correo_institucional ,tipo_identificacion,num_identificacion,
-    pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
+async function registroAuth(nombre,apellido,correo_institucional ,tipo_identificacion,num_identificacion,
+    pais,departamento,ciudad,residencia,barrio,direccion,
+    programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
     periodo_salida,fecha_salida ){
     try{
         
         registerSetDoc(nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
             pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
             fecha_salida,periodo_salida)
-        
-            window.location.href="procesar_solicitud.html"
+            
+            
+            alert("Los datos  se han registrado correctamente")
+            
+
+            
+          
            
+            
         
         
     }
@@ -59,3 +61,8 @@ form.addEventListener('submit',(evento)=>{
         console.log("el error es  :"+error.code)
     }
 } 
+    
+
+
+
+ 

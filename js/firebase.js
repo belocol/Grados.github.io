@@ -28,21 +28,7 @@ export const loginValidation = (email,password) => signInWithEmailAndPassword(au
 
 export const registerUser = (email,password) => createUserWithEmailAndPassword(auth, email, password)
 
-
-export const registerSetUsuario = (nombre,apellido,email,password) => {
- 
-  setDoc(doc(db,"Estudiantes_registrados",email),{
-
-    
-    nombre,
-    apellido,
-    email,
-    password
-  })
-  //console.log(registerSetUsuario).value
-}
-
-export const registerSetDoc = (nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
+ export const registerSetDoc = (nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
   pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,
   fecha_ingreso,periodo_ingreso, fecha_salida,periodo_salida) => {
   setDoc(doc(db,"Solicitudes_Grados",correo_institucional),{
@@ -67,5 +53,5 @@ export const registerSetDoc = (nombre,apellido,correo_institucional,tipo_identif
     
   })
 
-  
-}
+
+} 

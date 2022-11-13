@@ -186,7 +186,7 @@ body {
 
 
     .register{
-      background: -webkit-linear-gradient(left, #18ad62, #2f8c49);
+      background: -webkit-linear-gradient(left,#5ccb5f,#006414);
       margin-top: 3%;
       padding: 3%;
   }
@@ -399,7 +399,7 @@ padding: 5px 80px  0 80px ;
 
 body {
     color: #566787;
-    background: #f5f5f5;
+    background-color: #d0fdd7;
     font-family: 'Roboto', sans-serif;
 }
 .table-responsive {
@@ -517,6 +517,10 @@ table.table td i {
 .body{
   background-image :url(  );
   background-size: 100%;
-  background-color: #f8f8ff;
+  
 }
 
+#cajas_buscar{
+  display: flex;
+  align-items: flex-end;
+}

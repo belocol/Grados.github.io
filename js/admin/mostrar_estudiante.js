@@ -1,18 +1,17 @@
-import { db } from "./firebase.js";
+import { db } from "../firebase.js";
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 
-console.log("Hola")
+
 const querySnapshot = await getDocs(collection(db, "Solicitudes_Grados"));
-console.log("Hola")
 const tabla = document.getElementById('cuerpoTabla');
 
 querySnapshot.forEach((doc) => {
-    console.log("Hola")
+    
     const row = tabla.insertRow();
     const registros = doc.data();
     row.innerHTML= `
     <tr>
-        <td scope="row">${registros.nombre + registros.apellido}</td>
+        <td scope="row">${registros.nombre + " " +registros.apellido }</td>
         <td >${registros.correo_institucional}</td>
         <td >${registros.tipo_identificacion}</td>
         <td >${registros.num_identificacion}</td>

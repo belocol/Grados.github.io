@@ -1,5 +1,5 @@
-import { loginValidation } from "../js/firebase.js";
-import { db } from "./firebase.js";
+import { loginValidation } from "../firebase.js";
+
 //import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 
 const evento = document.getElementById("login");
