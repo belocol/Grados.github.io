@@ -24,38 +24,37 @@ formu.addEventListener('submit',(evento)=>{
     const fecha_salida =document.getElementById("Fechasalida");
     const periodo_salida =document.getElementById("PeriodoSalida");
     const correo_institucional =document.getElementById("correoInstitucional");
+    const imagen_estudiante= document.getElementById("response");
 
+
+    //console.log(imagen_estudiante.value)
     
-    registroAuth(nombre.value,apellido.value,correo_institucional.value,tipo_identificacion.value,
+    registroAuth(imagen_estudiante.value,nombre.value,apellido.value,correo_institucional.value,tipo_identificacion.value,
         num_identificacion.value,
         pais.value,departamento.value,ciudad.value,residencia.value,barrio.value,direccion.value,
         programa_academico.value,titulo.value,nivel_acamedico.value,fecha_ingreso.value,
         periodo_ingreso.value,fecha_salida.value,periodo_salida.value,
         fecha_salida.value)
 
-        
+        //console.log(imagen_estudiante.value)
 });
 
-async function registroAuth(nombre,apellido,correo_institucional ,tipo_identificacion,num_identificacion,
+async function registroAuth(imagen_estudiante,nombre,apellido,correo_institucional ,tipo_identificacion,num_identificacion,
     pais,departamento,ciudad,residencia,barrio,direccion,
     programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
-    periodo_salida,fecha_salida ){
+    periodo_salida,fecha_salida){
     try{
         
-        registerSetDoc(nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
-            pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,fecha_ingreso,periodo_ingreso,
-            fecha_salida,periodo_salida)
+        registerSetDoc(imagen_estudiante,nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
+            pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,
+            fecha_ingreso,periodo_ingreso,periodo_salida,fecha_salida)
+
+            console.log(imagen_estudiante.value)
+           
             
             
             alert("Los datos  se han registrado correctamente")
-            
-
-            
-          
-           
-            
-        
-        
+ 
     }
     catch (error){
         console.log("el error es  :"+error.code)

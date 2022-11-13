@@ -522,5 +522,5 @@ table.table td i {
 
 #cajas_buscar{
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }

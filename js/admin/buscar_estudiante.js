@@ -28,10 +28,14 @@ function VerInfo (docSnap,card){
 
     //window.location.href="seleccionar_usuario.html";
     card.innerHTML=`
-    <div class="card-header">
+    <div id="cajas_buscar2">
+    <div id="bg1">
+    <div class="card-header" >
+   
       <h2 class="card-title">${docSnap.data().nombre + " "+docSnap.data().apellido}</h2>
     </div>
     <div class="card-body">
+    <div>
       <p class="card-text">Email  : ${docSnap.data().correo_institucional}</p>
       
       <p class="card-text ">Tipo de identificación  : ${docSnap.data().tipo_identificacion}</p>
@@ -42,9 +46,16 @@ function VerInfo (docSnap,card){
       <p class="card-text">Nivel: ${docSnap.data().nivel_acamedico}</p>
       <p class="card-text">Fecha Ingreso: ${docSnap.data().fecha_ingreso + "-"+docSnap.data().periodo_ingreso}</p>
       <p class="card-text">Fecha Salida: ${docSnap.data().fecha_salida + "-"+docSnap.data().periodo_salida}</p>
-     
+
+      </div>
+      </div>
+      
+      <div id="bg">
+      <img src="${docSnap.data().imagen_estudiante}" class="img-fluid rounded-start" alt="">
+     </div>
 
     
+    </div>
     </div>
    
     `;

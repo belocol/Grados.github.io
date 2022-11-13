@@ -28,10 +28,12 @@ export const loginValidation = (email,password) => signInWithEmailAndPassword(au
 
 export const registerUser = (email,password) => createUserWithEmailAndPassword(auth, email, password)
 
- export const registerSetDoc = (nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
+ export const registerSetDoc = (imagen_estudiante,nombre,apellido,correo_institucional,tipo_identificacion,num_identificacion,
   pais,departamento,ciudad,residencia,barrio,direccion,programa_academico,titulo,nivel_acamedico,
-  fecha_ingreso,periodo_ingreso, fecha_salida,periodo_salida) => {
+  fecha_ingreso,periodo_ingreso,periodo_salida,
+  fecha_salida) => {
   setDoc(doc(db,"Solicitudes_Grados",correo_institucional),{
+    imagen_estudiante,
     nombre,
     apellido,
     correo_institucional,
@@ -48,10 +50,12 @@ export const registerUser = (email,password) => createUserWithEmailAndPassword(a
     nivel_acamedico,
     fecha_ingreso,
     periodo_ingreso,
+    periodo_salida,
     fecha_salida,
-    periodo_salida
+    imagen_estudiante
     
   })
+  
 
 
 } 

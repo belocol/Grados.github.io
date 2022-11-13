@@ -460,7 +460,40 @@
       <div class="row">
       <!--Codigo examen saber pro y tyt-->          
   
-  
+      <div >
+        <div class="form-floating mt-3 col-lg-5" >
+          
+          <input type="file" class="form-control"   accept="image/*;capture=camera" 
+           id="archivoInput" onchange="return validarExt()">
+          <label class="floatingInput">Imagen carné</label>
+          
+        </div>
+        
+        
+        </div>
+
+        <div class="col-lg-s3">
+          <div class="input-group ">
+              <div class="input-group-append">
+                  
+                  
+              </div>
+              <input 
+                  type="text" 
+                  id="response"
+                  placeholder="Base64" 
+                  
+                  class="form-control input_pass"
+                 
+               disabled>
+          </div>
+        </div>
+
+        <div id="visorArchivo">
+
+        </div>
+
+        
   </div>
 </div>
 </div>
@@ -478,7 +511,7 @@
   <div class="ContenedorInformacionAceptar">
     <div class="form-check form-switch">
       
-      <input type="submit" class="btn btn-primary" id="btnenviar" name="btnenviar" ></button>
+      <input type="submit" class="btn btn-primary" id="btnenviar" name="btnenviar" onclick></button>
     </div> 
   
   </div>
@@ -488,8 +521,43 @@
 
 </form>
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="module" src="/js/usuario/registrar_info.js"></script>
  <script type="module" src="/js/cerrar_sesion.js"></script> 
+ <script type="module" src="/js/script_imagen64.js"></script>
+
+ 
+
+ <script type="text/javascript">
+
+  function validarExt()
+  {
+      var archivoInput = document.getElementById('archivoInput');
+      var archivoRuta = archivoInput.value;
+      var extPermitidas = /(.jpg)$/i;
+      ///(.jpg|.jpeg|.png|.gif)$/i;
+      if(!extPermitidas.exec(archivoRuta)){
+          alert('Asegurese de haber seleccionado un jpg');
+          archivoInput.value = '';
+          return false;
+      }
+  
+      else
+      {
+          
+          if (archivoInput.files && archivoInput.files[0]) 
+          {
+              var visor = new FileReader();
+              visor.onload = function(e) 
+              {
+                  document.getElementById('visorArchivo').innerHTML = 
+                  '<embed src="'+e.target.result+'" width="250" height="180" />';
+              };
+              visor.readAsDataURL(archivoInput.files[0]);
+          }
+      }
+  }
+  </script>
 </html>
 
 
