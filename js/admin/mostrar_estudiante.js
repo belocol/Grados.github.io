@@ -1,9 +1,10 @@
-import { db } from "../firebase.js";
+import { db ,borrar_usuario} from "../firebase.js";
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
 
 
 const querySnapshot = await getDocs(collection(db, "Solicitudes_Grados"));
 const tabla = document.getElementById('cuerpoTabla');
+
 
 querySnapshot.forEach((doc) => {
     
@@ -24,9 +25,8 @@ querySnapshot.forEach((doc) => {
     <tr>
                        
                         <td>
-                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <button class="btn_borrar" data-id="${doc.id}">Borrar</button>
+                            
                         </td>
                     </tr>  
     
@@ -34,4 +34,23 @@ querySnapshot.forEach((doc) => {
     
                     `;
   
+    cuerpoTabla.innerHTML;
+
+    const btn_borrar= cuerpoTabla.querySelectorAll(".btn_borrar")
+   
+    btn_borrar.forEach(btn=>{
+        btn.addEventListener("click",async (event)=>{
+
+        
+            try {
+                borrar_usuario(event.target.dataset.id)
+                alert("Usuario "+event.target.dataset.id +" eliminado")
+                window.location.href("buscar_admin.html")
+              } catch (error) {
+                console.log(error);
+              }
+        })
+
+    })
 });
+
