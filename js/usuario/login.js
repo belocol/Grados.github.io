@@ -15,7 +15,7 @@ async function login(){
     if (validation != null) {
         alert("Inicio de sesion exitoso: "+user);
         if(user==="admin@unitropico.edu.co"){
-            window.location.href="buscar_admin.html";
+            window.location.href="http://127.0.0.1:5500/plantillas/admin/buscar_admin.html";
         }
         else{
             window.location.href="formulario.html"

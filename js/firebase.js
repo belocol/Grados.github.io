@@ -3,7 +3,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebas
 //metodo para el ingreso de usuarios
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js';
 //metodo para usar los servicios de Firestore
-import { getFirestore,  setDoc, doc ,collection , addDoc ,deleteDoc } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js';
+import { getFirestore,  setDoc, doc ,collection , addDoc ,deleteDoc ,getDoc} from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js';
 
 
 const firebaseConfig = {
@@ -61,3 +61,5 @@ export const registerUser = (email,password) => createUserWithEmailAndPassword(a
 
 } 
 export const borrar_usuario= id=>deleteDoc(doc(db,"Solicitudes_Grados",id))
+
+export const getTask= id=>getDoc(doc(db,"Solicitudes_Grados",id))
